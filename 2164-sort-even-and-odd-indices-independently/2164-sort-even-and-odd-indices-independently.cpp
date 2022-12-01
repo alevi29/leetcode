@@ -20,9 +20,6 @@ public:
             j++;
             index += 2;
         }
-        if (i < odds.size()) {
-            nums[index+1] = odds[i];
-        }
         if (j < evens.size()) {
             nums[index] = evens[j];
         }
