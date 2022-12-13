@@ -17,7 +17,6 @@ public:
         if (temp.length() != 0) words.push_back(temp);
         int count = words.size();
         for (int i = 0; i < words.size(); ++i) {
-            cout << words[i] << "|";
             int hCount = 0;
             bool valid = true;
             int j = 0;
