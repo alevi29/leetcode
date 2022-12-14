@@ -10,8 +10,8 @@ public:
         for (auto i : map) {
             pq.push(pr(i.second, i.first));
         }
-        int count = 0, cur = 0, lim = arr.size() / 2;
-        while (cur < lim) {
+        int count = 0, cur = 0;
+        while (cur < arr.size() / 2) {
             count++;            
             cur += pq.top().first;
             pq.pop();
