@@ -12,19 +12,7 @@
 class Solution {
     unordered_map <int, int> map;
     vector <TreeNode*> ret;
-    /*
-    void deleteN(TreeNode* &root) {
-        if (root == nullptr) {
-            return;
-        }
-        if (map[root->val] != 0) {
-            root = nullptr;
-            return;
-        }
-        deleteN(root->left);
-        deleteN(root->right);
-    };
-    */
+
     void trav(TreeNode* &root) {
         if (root == nullptr) {
             return;
@@ -50,7 +38,6 @@ public:
             map[to_delete[i]]++;
         }
         trav(root);
-        //deleteN(root);
         if (root != nullptr) {
             ret.push_back(root);
         }
