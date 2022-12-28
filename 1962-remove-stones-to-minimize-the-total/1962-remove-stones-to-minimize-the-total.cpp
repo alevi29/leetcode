@@ -6,9 +6,8 @@ public:
             pq.push(piles[i]);
         }
         for (int i = 0; i < k; ++i) {
-            int temp = pq.top() - (pq.top() / 2);
+            pq.push(pq.top() - (pq.top() / 2));
             pq.pop();
-            pq.push(temp);
         }
         k = 0;
         while (!pq.empty()) {
