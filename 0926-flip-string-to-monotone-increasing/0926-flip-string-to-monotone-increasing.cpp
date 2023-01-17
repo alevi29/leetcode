@@ -1,12 +1,11 @@
 class Solution {
 public:
     int minFlipsMonoIncr(string s) {
-        int onecount = 0, flips = 0;
-        for(auto it: s){
-            if(it=='1') onecount++;
-            else flips++;
-            flips = min(onecount, flips);
-        }
-        return flips;
+        int onesCount = 0, ret = 0;
+        for (auto i : s) {
+            i == '0' ? ret++ : onesCount++;
+            ret = min(ret, onesCount);
+    }
+        return ret;
     }
 };
