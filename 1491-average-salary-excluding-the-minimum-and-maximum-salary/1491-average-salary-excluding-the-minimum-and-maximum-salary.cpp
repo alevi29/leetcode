@@ -6,10 +6,8 @@ public:
         for (auto i : salary) {
             if (i < minSalary) minSalary = i;
             if (i > maxSalary) maxSalary = i;
+            ret += i;
         }
-        for (auto i : salary) {
-            if (i != minSalary && i != maxSalary) ret += i;
-        }
-        return ret / (salary.size() - 2);
+        return (ret - minSalary - maxSalary) / (salary.size() - 2);
     }
 };
