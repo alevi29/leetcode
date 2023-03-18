@@ -9,7 +9,6 @@ public:
         }
         int n = pq.size();
         for (int i = 0; i < n; ++i) {
-            cout << i;
             switch(i) {
                 case 0: 
                     ret[pq.top().second] = "Gold Medal";
