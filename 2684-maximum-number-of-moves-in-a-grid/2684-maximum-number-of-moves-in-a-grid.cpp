@@ -7,10 +7,7 @@ public:
         if (i < 0 || i == theGrid.size() || j >= theGrid[0].size() || theGrid[i][j] <= prev) return 0;
         prev = theGrid[i][j];
         theGrid[i][j] = INT_MAX;
-        int ret = search(i - 1, j + 1, theGrid, prev);
-        ret = max(ret, search(i, j + 1, theGrid, prev));
-        ret = max(ret, search(i + 1, j + 1, theGrid, prev));
-        return ret + 1;
+        return max({search(i - 1, j + 1, theGrid, prev), search(i, j + 1, theGrid, prev), search(i + 1, j + 1, theGrid, prev)}) + 1;
     }
     
     int maxMoves(vector<vector<int>>& grid) {
