@@ -1,10 +1,10 @@
 class Solution {
 public:
     int maximizeSum(vector<int>& nums, int k) {
-        int max = INT_MIN;
+        int maximum = INT_MIN;
         for (auto i : nums) {
-            if (i > max) max = i;
+            maximum = max(maximum, i);
         }
-        return ((max + k - 1) * (max + k) / 2) - ((max - 1) * max / 2);
+        return ((maximum + k - 1) * (maximum + k) / 2) - ((maximum - 1) * maximum / 2);
     }
 };
